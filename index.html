@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el lenguaje del documento como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Establece el conjunto de caracteres como UTF-8 para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace el sitio web responsivo, adaptando su tamaño a la pantalla del dispositivo -->
+    <title>Calculadora de Edad</title> <!-- Establece el título de la página que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula el archivo CSS para los estilos de la página -->
+</head>
+<body>
+    <div class="container"> <!-- Contenedor principal que agrupa todo el contenido -->
+        <h1>Calculadora de Edad</h1> <!-- Título principal de la página -->
+        <p>Selecciona tu fecha de nacimiento:</p> <!-- Instrucción al usuario para que seleccione una fecha -->
+        <input type="date" id="birthdate"> <!-- Campo de entrada para seleccionar la fecha de nacimiento -->
+        <button onclick="calcularEdad()">Calcular</button> <!-- Botón para ejecutar la función calcularEdad() al hacer clic -->
+
+        <div class="results"> <!-- Contenedor para mostrar los resultados -->
+            <!-- Edad -->
+            <div class="result-item edad"> <!-- Caja de resultado para la edad -->
+                <strong>EDAD:</strong> <!-- Título de la sección -->
+                <span id="edad">-</span> <!-- Elemento donde se mostrará la edad calculada -->
+            </div>
+            <!-- Días Vividos -->
+            <div class="result-item"> <!-- Caja de resultado para los días vividos -->
+                <strong>DÍAS VIVIDOS:</strong> <!-- Título de la sección -->
+                <span id="diasVividos">-</span> <!-- Elemento donde se mostrará el número de días vividos -->
+            </div>
+            <!-- Día de Nacimiento -->
+            <div class="result-item"> <!-- Caja de resultado para el día de la semana en el que naciste -->
+                <strong>DÍA NACIMIENTO:</strong> <!-- Título de la sección -->
+                <span id="diaNacimiento">-</span> <!-- Elemento donde se mostrará el día de la semana -->
+            </div>
+            <!-- Próximo Cumpleaños -->
+            <div class="result-item proximo-cumple"> <!-- Añadir la clase "proximo-cumple" aquí -->
+                <strong>PRÓXIMO CUMPLE:</strong> <!-- Título de la sección -->
+                <span id="proximoCumple">-</span> <!-- Elemento donde se mostrará el número de días hasta el próximo cumpleaños -->
+            </div>
+            <!-- Generación -->
+            <div class="result-item generacion"> <!-- Caja de resultado para la generación a la que perteneces -->
+                <strong>GENERACIÓN:</strong> <!-- Título de la sección -->
+                <span id="generacion">-</span> <!-- Elemento donde se mostrará la generación -->
+            </div>
+            <!-- Signo Zodiacal -->
+            <div class="result-item signo-zodiacal"> <!-- Caja de resultado para el signo zodiacal -->
+                <strong>SIGNO ZODIACAL:</strong> <!-- Título de la sección -->
+                <span id="signoZodiacal">-</span> <!-- Elemento donde se mostrará el signo zodiacal -->
+                <img id="zodiacImage" src="" alt="" /> <!-- Imagen del signo zodiacal que cambiará dinámicamente -->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script> <!-- Vincula el archivo JavaScript que contiene la lógica para calcular y mostrar los resultados -->
+</body>
+</html>

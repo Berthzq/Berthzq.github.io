@@ -1,0 +1,115 @@
+body {
+    background-color: #333; /* Establece un fondo oscuro (gris) para el cuerpo */
+    color: #fff; /* Establece el color de texto en blanco */
+    font-family: Arial, sans-serif; /* Usa la fuente Arial o una fuente sans-serif en caso de que no esté disponible */
+    text-align: center; /* Centra el texto dentro del body */
+    margin: 0; /* Elimina el margen por defecto alrededor del body */
+    padding: 0; /* Elimina el padding por defecto alrededor del body */
+}
+
+.container {
+    padding: 20px; /* Añade un espacio interior (padding) de 20px alrededor del contenido */
+    max-width: 400px; /* Limita el ancho máximo del contenedor a 400px */
+    margin: 50px auto; /* Centra el contenedor en la página con un margen de 50px arriba y abajo */
+    border: 1px solid #444; /* Agrega un borde gris oscuro alrededor del contenedor */
+    border-radius: 10px; /* Redondea las esquinas del contenedor */
+    background-color: #555; /* Establece un fondo gris más claro para el contenedor */
+}
+
+h1 {
+    font-size: 24px; /* Establece el tamaño de la fuente del título */
+    margin-bottom: 10px; /* Añade un margen inferior de 10px debajo del título */
+}
+
+p {
+    margin: 10px 0; /* Añade un margen de 10px arriba y abajo en los párrafos */
+}
+
+input[type="date"] {
+    padding: 12px; /* Aumenta el padding para darle más espacio dentro del input */
+    margin-bottom: 10px; /* Mantiene el margen inferior de 10px entre el input y otros elementos */
+    border: 1px solid #444; /* Borde gris oscuro alrededor del input */
+    border-radius: 5px; /* Redondea las esquinas del input */
+    background-color: #fff; /* Fondo blanco para el input */
+    color: #333; /* Texto en color gris oscuro para que sea más visible en el fondo blanco */
+    text-align: center; /* Centra el texto dentro del input */
+    width: 90%; /* Asegura que el input ocupe el 100% del ancho de su contenedor */
+    max-width: 500px; /* Opcional: Limita el ancho máximo del input */
+    font-weight: bold; /* Hace que el texto del input esté en negrita */
+}
+
+button {
+    padding: 10px 20px; /* Añade padding de 10px en la parte superior e inferior, y 20px a los lados */
+    border: none; /* Elimina el borde por defecto del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    background-color: #1F8369; /* Establece un fondo verde azulado para el botón */
+    color: #fff; /* Establece el color del texto en blanco */
+    font-size: 16px; /* Establece el tamaño de la fuente del botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    margin-top: 10px; /* Añade un margen superior de 10px */
+}
+
+button:hover {
+    background-color: #00997c; /* Cambia el color de fondo del botón cuando el cursor pasa sobre él */
+}
+
+.results {
+    margin-top: 20px; /* Añade un margen superior de 20px para separar el área de resultados del resto */
+    display: grid; /* Utiliza un diseño de cuadrícula (grid) para los resultados */
+    grid-template-columns: repeat(2, 1fr); /* Define dos columnas en la cuadrícula */
+    gap: 10px; /* Añade un espacio de 10px entre las celdas de la cuadrícula */
+}
+
+.result-item {
+    display: flex; /* Usa flexbox para los elementos dentro de cada ítem de resultado */
+    flex-direction: column; /* Organiza los elementos en columna dentro del recuadro */
+    border: 1px solid #444; /* Establece un borde gris oscuro alrededor del ítem */
+    border-radius: 8px; /* Redondea las esquinas del recuadro */
+    overflow: hidden; /* Asegura que el contenido no se desborde fuera del recuadro */
+}
+
+/* Estilo del título del recuadro */
+.result-item strong {
+    padding: 10px; /* Añade un padding de 10px alrededor del título */
+    font-size: 14px; /* Establece un tamaño de fuente más pequeño para el título */
+    background-color: #444; /* Establece un fondo gris oscuro para el título */
+    color: #ccc; /* Establece el color del texto en gris claro */
+    text-align: center; /* Centra el texto dentro del título */
+}
+
+/* Estilo de la información del recuadro */
+.result-item span {
+    padding: 15px; /* Añade un padding de 15px alrededor de la información */
+    font-size: 18px; /* Establece un tamaño de fuente más grande para la información */
+    font-weight: bold; /* Hace el texto en negrita */
+    background-color: #112233; /* Establece un fondo azul oscuro para la información */
+    color: #fff; /* Establece un color de texto verde azulado para resaltar la información */
+    text-align: center; /* Centra el texto dentro del recuadro de información */
+}
+
+/* EDAD: ocupa toda la primera fila */
+.results .edad {
+    grid-column: span 2; /* Hace que la edad ocupe las dos columnas de la cuadrícula */
+}
+
+/* Signo Zodiacal ocupa la 2da columna desde la 3ra hasta la 4ta fila */
+.results .signo-zodiacal {
+    grid-column: 2; /* Coloca el signo zodiacal en la segunda columna */
+    grid-row: 3 / span 2; /* Hace que ocupe desde la fila 3 hasta la fila 4 (2 filas) */
+    background-color: #112233; /* Fondo azul oscuro */
+    text-align: center; /* Centra el texto */
+}
+
+/* Próximo Cumple: hacer que ocupe todo el espacio */
+.results .proximo-cumple {
+    grid-column: span 1; /* Ocupa la 1ra columna */
+    background-color: #112233; /* Fondo azul oscuro */
+    text-align: center; /* Centra el texto */
+}
+
+
+/* Generación ocupa una sola columna */
+.results .generacion {
+    grid-column: 1; /* Coloca la generación en la primera columna */
+    background-color: #112233; /* Fondo azul oscuro */
+}
